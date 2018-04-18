@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// 如果变量名和属性名一样，可以直接省略
+		// age="30" 设置默认值,对应的值为undefined时生效
+    	let {name,age="30"}={name:'huang',age:'20'};
+    	// let {name:name,age:age}={name:'huang',age:'20'};
+    	let {name1,age1="30",list:[a1,a2,a3,a4] }={name:'huang',age:'20',list:['html','css','js','jq']};
+    	console.log(name);
+    	console.log(a1,a2,a3,a4)
+    	// {} 不能放在行首
+    	let b2,b3;
+    	( {b2,b3}={b2:1,b3:2} );
+    	console.log(b2,b3)
+	</script>
+</body>
+</html>

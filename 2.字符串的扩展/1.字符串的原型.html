@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h4>1. includes 返回布尔值 true/false (判断字符串中有没有指定的字符)</h4>
+	<p>str.includes("string","num")	(num表示开始查找的位置,可选参数) --第二个参数是数字，如果不是数字默认转换为数字(number方法),例如null转为0</p>
+	<hr>
+	<h4>2. startsWith和endsWith (判断字符串是不是以指定字符作为开头或者结尾) </h4>
+	<p>str.startswith('string','num') --num代表开始查找的位置</p>
+	<p>endsWith('string','num')  --num代表从前num个中查看</p>
+	<hr>
+	<h4>3. repeat (将字符串重复num次)</h4>
+	<p> num为正整数，且不能为Infinity(无穷),可以为0 -- 0到 -1 之间取0</p>
+	<hr>
+	<h4>4. padStart 和 padEnd(将字符串补齐)</h4>
+	<p>padStart/padEnd('num','string')  -- padStart在字符串之前补充,padEnd在字符串后面补充</p>
+</body>
+<script>
+	// 1.includes
+	let a="awejhiwet";
+	console.log("1."+a.includes('a',null));
+	console.log("2."+a.startsWith("a",3)+"  startsWith测试"); //false
+	console.log("3."+a.endsWith('a',1)+"  endWith测试"); //true
+	console.log("4."+a.repeat(3) +" repeat测试");	//awejhiwetawejhiwetawejhiwet
+	let a1="abc";
+	console.log(a1.padStart(9,"z")+"  padStart测试");	//zzzzzzabc
+	console.log(a1.padEnd(8,"z")+"  padEnd测试");		//abczzzzz
+</script> 
+</html>
